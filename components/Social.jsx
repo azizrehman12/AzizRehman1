@@ -1,18 +1,19 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedinIn, FaYoutube, FaTwitter } from "react-icons/fa";
-//this is social page
+
+// This is the socials array with unique id for each item
 const socials = [
-  { icon: <FaGithub />, path: '' },
-  { icon: <FaYoutube />, path: '' },
-  { icon: <FaTwitter />, path: '' },
-  { icon: <FaLinkedinIn />, path: '' },
+  { id: 1, icon: <FaGithub />, path: '' },
+  { id: 2, icon: <FaYoutube />, path: '' },
+  { id: 3, icon: <FaTwitter />, path: '' },
+  { id: 4, icon: <FaLinkedinIn />, path: '' },
 ];
 
 const Social = ({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
-      {socials.map((item, index) => (
-        <Link key={index} href={item.path} className={iconStyles}>
+      {socials.map((item) => (
+        <Link key={item.id} href={item.path} className={iconStyles}>
           {item.icon}
         </Link>
       ))}

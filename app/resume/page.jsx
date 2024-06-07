@@ -41,6 +41,7 @@ const experience = {
   title: "My experience",
   items: [
     {
+      id:1,
       company: "Code N Code IT Solutions UAE",
       position: "Developer",
       duration: "Currently working",
@@ -54,16 +55,19 @@ const education = {
   title: "My Education",
   items: [
     {
+      id:1,
       institution: "National University Of Technology Islamabad",
       Studied: "Software Engineering",
       duration: "2023-2027",
     },
     {
+      id:2,
       institution: "Islamia College Peshawar",
       Studied: "Pre Engineering",
       duration: "2021-2023",
     },
     {
+      id:3,
       institution: "Oriental Public School Mardan",
       Studied: "Science",
       duration: "2019-2021",
@@ -119,6 +123,7 @@ const Resume = () => {
         },
       }}
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 "
+      key={index}
     >
       <div className="container mx-auto  ">
         <Tabs defaultValue="experience" className="flex flex-col  xl:flex-row gap-[60px]">
@@ -140,7 +145,7 @@ const Resume = () => {
               <ScrollArea className="h-[480px]">
                 <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                 {experience.items.map((item, index) => 
-                { return <li className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl
+                { return <li key={item.id} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl
                 flex flex-col justify-center items-center lg:items-start gap-1" >
                   <div key={index} className="flex flex-col gap-2">
                   <span className="text-accent">{item.duration}</span>
@@ -167,9 +172,9 @@ const Resume = () => {
               <ScrollArea className="h-[480px]">
                 <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                 {education.items.map((item, index) => 
-                { return <li className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl
+                { return <li key={item.id} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl
                 flex flex-col justify-center items-center lg:items-start gap-1" >
-                  <div key={index} className="flex flex-col gap-2">
+                  <div key={item.id} className="flex flex-col gap-2">
                   <span className="text-accent">{item.duration}</span>
                    
                     <h3 text-xl className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.Studied}</h3>
