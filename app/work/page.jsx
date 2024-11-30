@@ -1,140 +1,65 @@
-"use client"
+"use client";
 
 import { motion } from "framer-motion";
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import Link from "next/link";
-import Image from "next/image";
-import WorkSliderBtns from "@/components/WorkSliderBtns";
+import React from "react";
 
-const projects = [
-    {
-        id: "project1",
-        num: "01",
-        category: 'frontend',
-        title: 'project 1',
-        description: "with more enhanced CSS features, users can understand easily how to use.",
-        stack: [{ name: "Html 5" }, { name: "Css 5" }, { name: "Next.js" }, { name: "Tailwind CSS" }, { name: "TypeScript" }],
-        image: '/work/music.PNG',
-        live: "",
-        github: "",
-    },
-    {
-        id: "project2",
-        num: "02",
-        category: 'frontend',
-        title: 'project 2',
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-        stack: [{ name: "Html 5" }, { name: "Css 5" }, { name: "Javascript" }],
-        image: '/work/java.jpg',
-        live: "",
-        github: "",
-    },
-    {
-        id: "project3",
-        num: "03",
-        category: 'frontend',
-        title: 'project 3',
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-        stack: [{ name: "Html 5" }, { name: "Css 5" }],
-        image: '/work/html css.jpg',
-        live: "",
-        github: "",
-    },
-];
+const seoProfile = {
+    id: "seoSpecialists",
+    num: "Work Experience",
+    category: 'SEO',
+    title: 'SEO Specialist',
+    description: `
+        SEO Specialist with 6+ Years of Excellence in Digital Marketing.
+        For over six years, we have been providing comprehensive SEO solutions, earning the trust and satisfaction of numerous clients. Over the past five years, we have successfully completed various projects, helping businesses from diverse industries achieve sustainable growth.
+    `,
+    services: [
+        {
+            title: "On-Page SEO",
+            details: "Improving website structure, optimizing keywords, enhancing page speed, and ensuring an exceptional user experience."
+        },
+        {
+            title: "Off-Page SEO",
+            details: "Building high-quality backlinks, managing outreach campaigns, and boosting domain authority for better rankings."
+        },
+        {
+            title: "Content Writing",
+            details: "Creating engaging, keyword-rich, and conversion-focused content tailored to meet client goals."
+        }
+    ],
+    stack: ["On-Page SEO", "Off-Page SEO", "Content Writing"],
+};
 
 const Work = () => {
-    const [project, setProject] = useState(projects[0]);
-
-    const handleSlideChange = (swiper) => {
-        const currentIndex = swiper.activeIndex;
-        setProject(projects[currentIndex]);
-    };
+    const { num, category, description, services } = seoProfile;
 
     return (
         <motion.section
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
-            key={project.id}
         >
             <div className="container mx-auto">
                 <div className="flex flex-col xl:flex-row xl:gap-[30px]">
                     <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
                         <div className="flex flex-col gap-[30px]">
                             <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
-                                {project.num}
+                                {num}
                             </div>
                         </div>
                         <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                            {project.category} project
+                            {category} Specialist
                         </h2>
-                        <p className="text-white/60 gap-2">{project.description}</p>
-                        <ul className="flex gap-4">
-                            {project.stack.map((item, index) => (
-                                <li key={item.id} className="text-xl text-accent">
-                                    {item.name}
-                                    {index !== project.stack.length - 1 && ","}
-                                </li>
-                            ))}
-                        </ul>
-                        <div className="border border-white/20 "></div>
+                        <p className="text-white/60 gap-2 whitespace-pre-line">{description}</p>
+                        <div className="border border-white/20 my-4"></div>
 
-                        <div className="flex items-center gap-8">
-                            <Link href={project.live}>
-                                <TooltipProvider delayDuration={100}>
-                                    <Tooltip>
-                                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                                            <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                                        </TooltipTrigger>
-                                        <TooltipContent>
-                                            <p>Live project</p>
-                                        </TooltipContent>
-                                    </Tooltip>
-                                </TooltipProvider>
-                            </Link>
-                            <Link href={project.github}>
-                                <TooltipProvider delayDuration={100}>
-                                    <Tooltip>
-                                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                                            <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                                        </TooltipTrigger>
-                                        <TooltipContent>
-                                            <p>Github repository</p>
-                                        </TooltipContent>
-                                    </Tooltip>
-                                </TooltipProvider>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="w-full xl:w-[50%]">
-                        <Swiper
-                            spaceBetween={30}
-                            slidesPerView={1}
-                            className="xl:h-[520px] mb-12"
-                            onSlideChange={handleSlideChange}
-                        >
-                            {projects.map((project) => (
-                                <SwiperSlide key={project.id} className="w-full">
-                                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                                        <div className="absolute top-0 bottom-0 w-full bg-black/10 z-10"></div>
-                                        <div className="relative w-full h-full">
-                                            <Image
-                                                src={project.image}
-                                                layout="fill"
-                                                className="object-cover"
-                                                alt={project.title}
-                                            />
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
+                        <div className="flex flex-col gap-6">
+                            {services.map((service, index) => (
+                                <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-lg">
+                                    <h3 className="text-2xl font-semibold text-accent mb-2">{service.title}</h3>
+                                    <p className="text-white/80">{service.details}</p>
+                                </div>
                             ))}
-                            {/* bottom */}
-                            <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50% - 22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none" btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"/>
-                        </Swiper>
+                        </div>
                     </div>
                 </div>
             </div>

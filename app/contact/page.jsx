@@ -10,17 +10,22 @@ const info = [
     {
         icon: <FaPhoneAlt />,
         title: "Phone",
-        description: "(+92) 3479001009 / (+92) 3137029560",
+        description: "+447376773935 ",
     },
     {
         icon: <FaEnvelope />,
         title: "Email",
-        description: "azizrehmanf23@gmail.com / azizrehman_504@yahoo.com",
+        description: "Hello@outreachparameter.com",
     },
     {
         icon: <FaMapMarkerAlt />,
-        title: "Address",
-        description: "National University of Technology (NuTech) Islamabad ",
+        title: " US Address",
+        description: " 221 Madison Avenue New York, NY 10016 United States",
+    },
+    {
+        icon: <FaMapMarkerAlt />,
+        title: " Uk Address",
+        description: "  31 Downing Plaza Manchester M1 2WN United Kingdom",
     }
 ];
 
@@ -42,20 +47,21 @@ const Contact = () => {
                 <div className="flex flex-col xl:flex-row gap-[30px]">
                     <div className="xl:w-[54%] order-2 xl:order-none">
                         <form className="flex flex-col gap-6 p-10 bg-[#272672c] rounded-xl bg-white/5">
-                            <h3 className="text-accent text-4xl"> <span>.</span>Let's work together</h3>
-                            <p className="text-white/60 text-align: justify">I am a web developer with a strong foundation in HTML,CSS,javascript,typescript,tailwind css 
-                            and other programming languages.I possess advanced skills in Figma, which I use to create 
-                            intuitive and visually appealing web designs My expertise includes translating Figma designs 
-                            into responsive and functional websites. I am proficient in modern web development technologies 
-                            and frameworks, ensuring optimal performance and user experience.
+                            <h3 className="text-accent text-4xl"> <span>.</span>Why Choose Us?</h3>
+                            <p className="text-white/60 text-align: justify">
+                    Expertise You Can Trust: 5 Years of experience in SEO guest posting and link building.
+                    Tailored Strategies: Customized solutions based on your business goals and niche.
+                    Data-Driven Results: We leverage analytics to refine our strategies and maximize ROI.
+                    Quality-First Approach: We prioritize quality over quantity in every project we undertake.
+                    Let’s Work Together!
                             </p>
-                            <div>
+                            {/* <div>
                                 <Input type="text" placeholder="Firstname" />
                                 <Input type="text" placeholder="Lastname" />
                                 <Input type="email" placeholder="Email address" />
                                 <Input type="tel" placeholder="Phone" />
-                            </div>
-                            <Select>
+                            </div> */}
+                            {/* <Select>
                                 <SelectTrigger className="w-full">
                                     <SelectValue placeholder="Select a service" />
                                 </SelectTrigger>
@@ -68,12 +74,12 @@ const Contact = () => {
                                         <SelectItem value="web-design">Web design</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
-                            </Select>
+                            </Select> */}
 
-                            <Textarea className="h-[200px]" 
-                            placeholder="Type your message here." />
+                            {/* <Textarea className="h-[200px]" 
+                            placeholder="Type your message here." /> */}
                             {/*button*/}
-                            <Button size="md" className="max-w-40">Send message</Button>
+                            {/* <Button size="md" className="max-w-40">Send message</Button> */}
                         </form>
                     </div>
                     <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">

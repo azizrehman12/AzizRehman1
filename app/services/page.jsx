@@ -8,29 +8,36 @@ const services = [
   {
     id: '1',
     num: '01',
-    title: 'Web Development',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur',
+    title: ' On-Page SEO',
+    description: 'We optimize every element of your website to ensure search engines and users can easily navigate and engage with your content. From meta tags to internal linking, we fine-tune every detail.',
     href: ""
   },
   {
     id: '2',
     num: '02',
-    title: 'UI/UX Design',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur',
+    title: 'Off-Page SEO',
+    description: 'Our strategic link-building services focus on building high-quality backlinks from authoritative sites to enhance your website’s domain authority and credibility.',
     href: ""
   },
   {
     id: '3',
     num: '03',
-    title: 'Logo Design',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur',
+    title: 'Keyword Research',
+    description: 'We conduct comprehensive keyword research to identify high-performing, relevant search terms that align with your audience and goals.',
     href: ""
   },
   {
     id: '4',
     num: '04',
-    title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur',
+    title: ' Content Writing',
+    description: 'Our expert writers create compelling, SEO-friendly content that resonates with your audience while meeting search engine guidelines. From blog posts to web copy, we deliver content that converts.',
+    href: ""
+  },
+  {
+    id: '5',
+    num: '05',
+    title: ' Technical SEO',
+    description: 'We tackle the technical aspects of SEO, such as site speed, mobile optimization, structured data, and more, ensuring your website runs smoothly and ranks higher in search results',
     href: ""
   },
 ];

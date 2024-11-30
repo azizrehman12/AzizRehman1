@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedinIn, FaYoutube, FaTwitter } from "react-icons/fa";
 
 // This is the socials array with unique id for each item
 const socials = [
-  { id: 1, icon: <FaGithub />, path: '' },
+ // { id: 1, icon: <FaGithub />, path: '' },
   { id: 2, icon: <FaYoutube />, path: '' },
   { id: 3, icon: <FaTwitter />, path: '' },
   { id: 4, icon: <FaLinkedinIn />, path: '' },

@@ -14,7 +14,7 @@ const Header = () => {
             
             <Link href={"/"}>
             <h1 className="text-4xl font-semibold">
-                Aziz Rehman<span className="text-accent">.</span>
+            Outreachparameter<span className="text-accent">.</span>
             </h1>
             </Link>
 
@@ -26,9 +26,9 @@ const Header = () => {
        
        
         <Nav/>
-        <Link href="/contact">
+        {/* <Link href="/contact">
             <Button>Hire me</Button>
-        </Link>
+        </Link> */}
         </div>
 
         {/* mobile nav*/}
